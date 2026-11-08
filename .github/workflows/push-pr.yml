@@ -1,0 +1,29 @@
+name: push or pull requests
+
+on:
+ push:
+  branches:
+   - main
+   - "release/**"
+  paths: 
+   "src/**"
+
+ pull_request:
+  branches:
+   - main
+   - "release/**"
+  
+jobs:
+  example-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print welcome message
+        run: echo "welcome on the GitHub Actions"
+        
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: list repository files
+        run: ls -la
+
+ 
