@@ -1,0 +1,12 @@
+name: test github schdule
+
+on:
+ schedule:
+   - cron: "0 0 * * * "
+jobs:
+  daily_task:
+    runs-on: ubuntu-latest
+    steps:
+     - name: "print message"
+       run: echo "test schdule task" 
+   
