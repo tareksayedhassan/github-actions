@@ -23,7 +23,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v6
 
-      - name: list repository files
-        run: ls -la
+      - name: run node js
+        run: | 
+          node -v
+          npm -v
 
  
