@@ -1,8 +1,9 @@
 name: test github schdule
 
 on:
- schedule:
-   - cron: "0 0 * * * "
+  schedule:
+    - cron: "*/5 * * * *"
+   
 jobs:
   daily_task:
     runs-on: ubuntu-latest
